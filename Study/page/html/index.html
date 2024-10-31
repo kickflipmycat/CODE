@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script type="text/JavaScript" src="../js/openOtherWebsites.js"></script>
+</head>
+<body>
+    <h1>Order Form</h1>
+    <form id="orderForm" action="#" method="POST">
+        <!-- Customer Details Fieldset -->
+        <fieldset>
+            <legend>Customer Details</legend>
+            
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
+        </fieldset>
+
+        <!-- Payment Details Fieldset -->
+        <fieldset>
+            <legend>Payment Details</legend>
+            
+            <label for="paymentType">Payment Type:</label>
+            <select id="paymentType" name="paymentType" required>
+                <option value="credit">Credit Card</option>
+                <option value="debit">Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select><br><br>
+
+            <label for="cardNumber">Credit Card Number:</label>
+            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required><br><br>
+
+            <label for="ccv">CCV:</label>
+            <input type="text" id="ccv" name="ccv" pattern="\d{3}" required><br><br>
+
+            <label for="expiryMonth">Expiry Month:</label>
+            <select id="expiryMonth" name="expiryMonth" required>
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="12">December</option>
+            </select><br><br>
+
+            <label for="expiryYear">Expiry Year:</label>
+            <select id="expiryYear" name="expiryYear" required>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+            </select><br><br>
+        </fieldset>
+
+        <!-- Buttons -->
+        <button type="submit">Submit</button>
+        <button type="button" onclick="openHelp()">Help</button>
+        <button type="button" onclick="openOtherWebsites()">Go to Other Websites</button>
+        <button type="button" id="demo"  onclick="pressButton()"> </button>
+    </form>
+    
+</body>
+</html>
