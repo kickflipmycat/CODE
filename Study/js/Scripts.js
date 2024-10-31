@@ -1,4 +1,4 @@
-function wwebsiteSelection90 {
+function wwebsiteSelection() {
 var select = prompt("Enter selection")
 return;
 }
