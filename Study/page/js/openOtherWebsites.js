@@ -30,11 +30,11 @@ function openOtherWebsites() {
     // Infinite loop to keep prompting the user until a valid choice is entered
     while (true) {
         choice = prompt("Enter 1, 2, or 3 to select a rock and roll website:\n1. Rolling Stone\n2. Ultimate Classic Rock\n3. Loudwire");
-        if (choice === null) {
-          alert("please enter a number");
-        }
+        //if (choice === null) {
+        //  alert("please enter a number");
+       // }
         // Check if the user's choice matches one of the valid options
-        else if (choice === "1") {
+        if (choice === "1") {
             window.location.href = "https://www.rollingstone.com";
             return; // Exit the function if the user made a valid choice
         } else if (choice === "2") {
