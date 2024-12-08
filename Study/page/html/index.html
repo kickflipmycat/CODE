@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Form</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script type="text/JavaScript" src="../js/openOtherWebsites.js"></script>
 </head>
 <body>
     <h1>Order Form</h1>
@@ -15,16 +14,16 @@
             <legend>Customer Details</legend>
             
             <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName" required><br><br>
+            <input type="text" id="firstName" name="firstName"><br><br>
 
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required><br><br>
+            <input type="text" id="lastName" name="lastName"><br><br>
 
             <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required><br><br>
+            <input type="email" id="email" name="email"><br><br>
 
             <label for="postcode">Postcode:</label>
-            <input type="text" id="postcode" name="postcode" pattern="\d{4}" required><br><br>
+            <input type="text" id="postcode" name="postcode"><br><br>
         </fieldset>
 
         <!-- Payment Details Fieldset -->
@@ -32,20 +31,20 @@
             <legend>Payment Details</legend>
             
             <label for="paymentType">Payment Type:</label>
-            <select id="paymentType" name="paymentType" required>
+            <select id="paymentType" name="paymentType">
                 <option value="credit">Credit Card</option>
                 <option value="debit">Debit Card</option>
                 <option value="paypal">PayPal</option>
             </select><br><br>
 
             <label for="cardNumber">Credit Card Number:</label>
-            <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required><br><br>
+            <input type="text" id="cardNumber" name="cardNumber" onblur="validateForm()"><br><br>
 
             <label for="ccv">CCV:</label>
-            <input type="text" id="ccv" name="ccv" pattern="\d{3}" required><br><br>
+            <input type="text" id="ccv" name="ccv" onblur="validateForm()"><br><br>
 
             <label for="expiryMonth">Expiry Month:</label>
-            <select id="expiryMonth" name="expiryMonth" required>
+            <select id="expiryMonth" name="expiryMonth">
                 <option value="01">January</option>
                 <option value="02">February</option>
                 <option value="03">March</option>
@@ -53,7 +52,7 @@
             </select><br><br>
 
             <label for="expiryYear">Expiry Year:</label>
-            <select id="expiryYear" name="expiryYear" required>
+            <select id="expiryYear" name="expiryYear">
                 <option value="2024">2024</option>
                 <option value="2025">2025</option>
                 <option value="2026">2026</option>
@@ -61,10 +60,12 @@
         </fieldset>
 
         <!-- Buttons -->
-        <button type="submit">Submit</button>
-        <button type="button" onclick="openHelp()">Help</button>
+        <button type="submit" onclick="validateForm()">Submit</button>
+        <button type="button" onclick="window.open('help.html', '_blank', 'width=500,height=500')">Help</button>
         <button type="button" onclick="openOtherWebsites()">Go to Other Websites</button>
     </form>
     
+    <!-- Link to your JavaScript file -->
+    <script src="../js/openOtherWebsites.js"></script>
 </body>
 </html>
